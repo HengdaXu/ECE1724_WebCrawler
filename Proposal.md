@@ -26,4 +26,8 @@ With a background in big data, I understand that data acquisition and analysis a
 
 ### Key Features
 
+1. Asynchronous crawling using stackless coroutines to speed up data collection
+
+`Tokio` library will be used in this project. It can achieves asynchronous operations by using stackless coroutines. When we are requesting the data from websites, the delay of responding time for a certain website can take a long time, and block the requesting for the other website. Therefore, we want to arrange the order of requesting and waiting using multithread to speed up the time for collecting the datas. `Aawait`, `async` and `future` libs will need in our implementation. When an `async` function encounters an `await` expression, it pauses execution of the current function and returns a `future` object to the scheduler. The scheduler can then arrange to execute other tasks without blocking the current thread while waiting for this task. Once the awaited operation completes, the `async` function resumes execution from the point where it paused at `await`.
+
 ## Tentative Plan
