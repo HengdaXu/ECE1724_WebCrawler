@@ -9,13 +9,7 @@
 
 ## Motivation
 
-In today, the explosive growth of information has made effective data collection and analysis crucial. As a core tool for data collection, web crawlers are widely used in various fields such as data mining, competitive product analysis, and news aggregation. 
-
-Rust is one of the latest and most popular programming languages, known for its high performance and powerful concurrency, which can significantly enhance the efficiency of web crawlers and accelerate data processing. Additionally, the Rust ecosystem offers several robust web crawler frameworks, such as `reqwest`, `scraper`, and `select`.
-
-
-
-
+In today, the rapid growth of information has made "data-driven decision-making"([`DDDM`](https://www.ibm.com/think/topics/data-driven-decision-making)) more important than ever. Whether mining large volumes of data for analysis, monitoring competitors' products, or aggregating news from various sources, the ability to collect data quickly and efficiently has become a core requirement.
 
 ## Objective and Key Features
 
