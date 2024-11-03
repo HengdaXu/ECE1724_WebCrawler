@@ -1,6 +1,7 @@
 # Web Crawler with Data Analysis Proposal
 
 - Hengda Xu
+- Zijin Liao
 
 ## Table of Contents
 1. [Motivation](#motivation)
