@@ -45,7 +45,7 @@ For this feature, we can apply `Html5ever` or `Scraper` for HTML parsing. By com
 
 - **Text User Interface**
 
-Using the Cursive or Ratatui library, we will develop an intuitive text-based user interface (TUI) for users to interactively view data analysis results. The TUI will display both the word frequency and sentiment analysis results and offer basic navigation and options. For instance, users can select different data sources to view specific results, refresh the data, and navigate through various sites’ analysis outputs.
+By using the `Cursive` or `Ratatui` library, we will develop an intuitive text-based user interface (`TUI`) for users to interactively view data analysis results. The `TUI` will display both the word frequency and sentiment analysis results and offer basic navigation and options. For instance, users can select different data sources to view specific results, refresh the data, and navigate through various sites’ analysis outputs.
 
 
 ## Tentative Plan
