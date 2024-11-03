@@ -59,7 +59,9 @@ With a background in big data, I understand that data acquisition and analysis a
 ## **Tentative Plan**
 
 - **Team Member Responsibilities**
+
     **Group Tasks**
+    
     - **Asynchronous Crawler Module**: Responsible for implementing the asynchronous web crawler. This includes utilizing the `Tokio` library to enable concurrent requests to multiple websites and managing the execution flow of requests and responses. Responsible for using `reqwest` for sending Http request to the sever.
 
     - **Data Parsing and Extraction**:  Using the `Html5ever` parser to transform complex HTML documents into manageable data structures. This involves writing additional code for effective data extraction while ensuring optimal performance.
@@ -74,39 +76,55 @@ With a background in big data, I understand that data acquisition and analysis a
 
 - **Timeline Schedule**
     - **Week 1 (Nov 5 - Nov 10): Initial Setup & Planning**
+
         **Tasks**: 
+
         - Finalize project scope and objectives.
         - Set up the GitHub repository and basic project structure.
         - Conduct preliminary research and finalize libraries and tools.
+
         **Deliverables**:
+
         - Initial GitHub repository with setup instructions in README.md.
         - Draft of project design with a breakdown of key modules and workflows.
 
     - **Week 2-3 (Nov 11 - Nov 24): Implement Core Crawling and Data Extraction**
+
         **Tasks**:
+
         - Implement asynchronous crawling using `Tokio` and `reqwest`.
         - Integrate HTML parsing using `Html5ever` for data extraction.
         - Start preliminary tests on a sample of websites to verify crawling and extraction functionality.
+
         **Deliverables**:
+
         - Fully functional asynchronous web crawler capable of retrieving data.
         - Sample output of extracted data to verify accuracy and completeness.
 
     - **Week 4-5 (Nov 25 - Dec 9): Data Analysis Functions & Develop Text-Based User Interface (TUI)**
+
         **Tasks**:
+
         - Implement word frequency analysis to provide insights into common keywords and themes.
         - Develop sentiment analysis function (optional based on progress) to give basic positive/negative assessments.
         - Use `Cursive` or `Ratatui` to build a TUI that displays analysis results.
         - Integrate `TUI ` with the data analysis functions for an interactive experience.
+
         **Deliverables**:
+
         - Word frequency and sentiment analysis functions with initial testing results.
         - Functional TUI showcasing data collection and analysis results.
 
     - **Final Days (Dec 10 - Dec 15): Testing, Debugging, and Documentation**
+
         **Tasks**:
+
         - Conduct full testing across all modules to ensure robustness.
         - Prepare a comprehensive README.md with setup instructions and feature explanations.
         - Record a 1-5 minute video demo of the project.
+
         **Deliverables**:
+
         - Fully tested and documented project on GitHub.
         - Video demo ready for submission.
 
