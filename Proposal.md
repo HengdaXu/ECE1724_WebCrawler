@@ -1,7 +1,7 @@
 # **Web Crawler with Data Analysis Proposal**
 
-- Hengda Xu
-- Zijin Liao
+- Hengda Xu, 1004749631
+- Zijin Liao, 1004303489
 
 ## **Table of Contents**
 1. [Motivation](#motivation)
