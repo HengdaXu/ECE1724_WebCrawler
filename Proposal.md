@@ -16,13 +16,13 @@ On the other hand, `Rust`, as one of the newest and most popular programming lan
 
 Although Rust has some effective libraries for web scraping, like `reqwest` and `scraper`, and data analysis libraries such as `polars`, tools for integrating data collecting and analysis are scarce. This often requires developers to call separate libraries for fetching and analyzing data, leading to extra steps. 
 
-Ultimately, I aim to create a fully functional tool for filling the gap of Rust's ecosystem in integration of data crawling and analysis.
+Ultimately, We aim to create a fully functional tool for filling the gap of Rust's ecosystem in integration of data crawling and analysis.
 
 ## **Objective and Key Features**
 
 ### **Objective**
 
-With a background in big data, I understand that data acquisition and analysis are both important. My goal is to develop an `efficient`, `user-friendly` web crawler by Rust that not only enables `data crawling` but also provides `analysis capabilities`, for reducing the operations between collection and analysis.
+With a background in big data, we understand that data acquisition and analysis are both important. My goal is to develop an `efficient`, `user-friendly` web crawler by Rust that not only enables `data crawling` but also provides `analysis capabilities`, for reducing the operations between collection and analysis.
 
 ### **Key Features**
 
@@ -61,7 +61,7 @@ With a background in big data, I understand that data acquisition and analysis a
 - **Team Member Responsibilities**
 
     **Group Tasks**
-    
+
     - **Asynchronous Crawler Module**: Responsible for implementing the asynchronous web crawler. This includes utilizing the `Tokio` library to enable concurrent requests to multiple websites and managing the execution flow of requests and responses. Responsible for using `reqwest` for sending Http request to the sever.
 
     - **Data Parsing and Extraction**:  Using the `Html5ever` parser to transform complex HTML documents into manageable data structures. This involves writing additional code for effective data extraction while ensuring optimal performance.
