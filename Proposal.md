@@ -28,7 +28,7 @@ With a background in big data, I understand that data acquisition and analysis a
 
 - **Asynchronous crawling using stackless coroutines to speed up data collection**
 
-Owners: [Hengda Xu][Zijin Liao]
+Owners: Hengda Xu, Zijin Liao
 
 `Tokio` library will be used in this project. It can achieves asynchronous operations by using stackless coroutines. When we are requesting the data from websites, the delay of responding time for a certain website can take a long time, and block the requesting for the other website. Therefore, we want to arrange the order of requesting and waiting using multithread to speed up the time for collecting the datas. `Aawait`, `async` and `future` libs will need in our implementation. When an `async` function encounters an `await` expression, it pauses execution of the current function and returns a `future` object to the scheduler. The scheduler can then arrange to execute other tasks without blocking the current thread while waiting for this task. Once the awaited operation completes, the `async` function resumes execution from the point where it paused at `await`.
 
@@ -37,13 +37,13 @@ Meanwhile, `reqwest` will be used for sending Http request to the sever. `Reqwes
 
 - **Data parsing and extraction using HTML parsers**
 
-Owners: [Hengda Xu][Zijin Liao]
+Owners: Hengda Xu, Zijin Liao
 
 For this feature, we can apply `Html5ever` or `Scraper` for HTML parsing. By comparing `Html5ever` with `Scraper`, we decide to use `Html5ever` instead of `Scraper`. `Html5ever` is a high-speed HTML parsing which can tansform the http document from a complicated `string` into a `Jason` hashmap. It's designed for Rust's performance and efficiency. Even though, `Scraper` is specifically designed for web scraping which are easier to setup, it is slower and might not be as good as `Html5ever` when dealing with complex `HTML` structures. Although `Html5ever` needs to integrate other libraries and write additional code to handle data extraction, we consider this as a good practice for us to be better in the code of Rust. 
 
 - **Basic data analysis**
 
-Owners: [Hengda Xu]
+Owners: Hengda Xu
 
 1. **Word Frequency Analysis**: In order to help users quickly identify keywords and popular topics, we will perform word frequency analysis on the crawled data. This involves labeling text as individual words and counting the frequency of each word. By highlighting frequently occurring terms, users can gain insight into the main topics related to the extracted words.
 
@@ -51,7 +51,7 @@ Owners: [Hengda Xu]
 
 - **Text User Interface**
 
-Owners: [Zijin Liao]
+Owners: Zijin Liao
 
 By using the `Cursive` or `Ratatui` library, we will develop an intuitive text-based user interface (`TUI`) for users to interactively view data analysis results. The `TUI` will display both the word frequency and sentiment analysis results and offer basic navigation and options. For instance, users can select different data sources to view specific results, refresh the data, and navigate through various sites’ analysis outputs.
 
