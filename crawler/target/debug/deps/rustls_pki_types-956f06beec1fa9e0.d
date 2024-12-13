@@ -1,0 +1,10 @@
+/Users/fenda/Desktop/ECE1724/ECE1724_WebCrawler/crawler/target/debug/deps/librustls_pki_types-956f06beec1fa9e0.rmeta: /Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/lib.rs /Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/base64.rs /Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/server_name.rs /Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/pem.rs
+
+/Users/fenda/Desktop/ECE1724/ECE1724_WebCrawler/crawler/target/debug/deps/librustls_pki_types-956f06beec1fa9e0.rlib: /Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/lib.rs /Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/base64.rs /Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/server_name.rs /Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/pem.rs
+
+/Users/fenda/Desktop/ECE1724/ECE1724_WebCrawler/crawler/target/debug/deps/rustls_pki_types-956f06beec1fa9e0.d: /Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/lib.rs /Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/base64.rs /Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/server_name.rs /Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/pem.rs
+
+/Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/lib.rs:
+/Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/base64.rs:
+/Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/server_name.rs:
+/Users/fenda/.cargo/registry/src/index.crates.io-6f17d22bba15001f/rustls-pki-types-1.10.0/src/pem.rs:
