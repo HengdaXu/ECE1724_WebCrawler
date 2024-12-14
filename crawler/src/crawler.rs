@@ -1,8 +1,8 @@
 use spider::website::Website;
 use spider::page::Page;
 
-pub async fn crawl_web() -> Option<Box<Vec<Page>>>{
-    let mut website: Website = Website::new("https://spider.cloud");
+pub async fn crawl_web(url: String) -> Option<Box<Vec<Page>>>{
+    let mut website: Website = Website::new(&url);
 
     // Start the crawling process
     website.scrape().await;
