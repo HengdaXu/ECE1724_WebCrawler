@@ -64,7 +64,7 @@ After `cargo run`, the UI will show on the terminal. On the main UI interface, t
 
 ![main UI page](main.jpg)
 
-Before starting crawl, we suggest you to check the url for successful crawling. Here are some error situation when you input an empty url or invalid url.
+Before starting crawl, we suggest you to check the url. Here are some error situation when you input an empty url or invalid url.
 
 ![Empty URL page](emptyurl.jpg)
 ![Invalid URL page](invalidurl.jpg)
@@ -72,6 +72,20 @@ Before starting crawl, we suggest you to check the url for successful crawling. 
 Here is the valid url that can start crawling (`https://spider.cloud`)
 
 ![Valid URL page](successurl.jpg)
+
+After clicking the `Start Crawling`, it will lead you to the paring result interface. Also, there are some error reports will inform you if meeting some problems during the crawling steps.
+
+![Results page](Parsing.jpg)
+
+When there are no errors and data is displayed on the page, you can click the `Frequency Analysis` button in the lower right corner to perform frequency analysis.
+
+![Word Frequency](wf.jpg)
+
+Also, you can click the `Top 5` button to display the 5 words with the highest frequency.
+
+![Top 5](top.jpg)
+
+If you want to go back previous interface, just click the `ok` button or `back` button.
 
 Please refer to the video for detailed instructions of how to use the tool.
 
