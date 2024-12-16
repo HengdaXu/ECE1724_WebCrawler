@@ -5,6 +5,7 @@
 ## **Table of Contents**
 1. [Motivation](#motivation)
 2. [Objective and Key Features](#objective-and-key-features)
+3. [Reproducibility](#reproducibility)
 
 ## **Motivation**
 
@@ -25,3 +26,27 @@ With a background in big data, we understand that data acquisition and analysis 
 ### **Key Features**
 
 - **Asynchronous crawling using stackless coroutines to speed up data collection**
+
+We used `spider`, a lightweight, multithreaded web crawler library developed by the Rust community to quickly crawl web content and links. It is designed to be efficient, easy to use, and flexible to handle small or large-scale crawling tasks. This module contains the `Website` and `Page`. We use `Website::new(url)` to create and store the crawl object, and use `website.get_pages()` to get the crawled page and its information. Next, we traverse the `Page` to extract the HTML text or links on the page.
+
+We design an `async` function to implement the asynchronous crawler function. We used the `website.scrape()` method to scrape the page and keep the HTML raw content for parsing.
+
+Also, we combined the contents of Assignment 3. The `Url` lib is used to detect the url entered by the user to determine whether the url is valid for crawling.
+
+- **Data parsing and extraction using HTML parsers**
+
+We use a lightweight and powerful Rust library, `scraper`, to focus on extracting and parsing data from HTML documents. We only extract the text content from the html. So we're filtering out all the `tags` in the html and just keeping the text content. And we process the text content, filtering out all the symbols and reserving only the words for later analysis.
+
+- **Basic data analysis**
+
+1. **Word Frequency Analysis**: In order to help users quickly identify keywords and popular topics, we perform word frequency analysis on the crawled data. This involves labeling text as individual words and counting the frequency of each word. By highlighting frequently occurring terms, users can gain insight into the main topics related to the extracted words.
+
+2. **Extended function**: We can help users display the top five words that are used mostly on the crawling web.
+
+- **Text User Interface**
+
+By using the `Cursive` library, we develop an intuitive text-based user interface (`TUI`) for users to interactively view data analysis results. 
+
+The `TUI` will display both the word frequency results and offer basic navigation and options.
+
+## **Reproducibility**
