@@ -8,7 +8,7 @@
 3. [Reproducibility](#reproducibility)
 4. [Future Plan](#future-plan)
 5. [Contributions](#contributions)
-6. [Appendix](#video-demo)
+6. [Video Demo](#video-demo)
 
 ## **Motivation**
 
