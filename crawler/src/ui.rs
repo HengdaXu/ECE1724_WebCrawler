@@ -77,7 +77,7 @@ pub async fn init_ui() {
                         if let Some(combined_text) = combined_text {
                             s.add_layer(
                                 Dialog::around(TextView::new(combined_text)).title("Crawled Text")
-                                    .title("Entered URL")
+                                    .title("Parsing Content")
                                     .button("Back", |s| {
                                         s.pop_layer();
                                     })
