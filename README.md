@@ -55,3 +55,8 @@ After you download the unzip package from our git repository. Unzip the unzip pa
 ```
 cd ECE1724_WebCrawler/crawler
 ```
+Then, use `cargo build` and `cargo run`(`cargo build` may take few minutes to compiling the libs). 
+```
+cargo build
+cargo run
+```
