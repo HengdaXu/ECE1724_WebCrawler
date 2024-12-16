@@ -64,6 +64,15 @@ After `cargo run`, the UI will show on the terminal. On the main UI interface, t
 
 ![main UI page](main.jpg)
 
+Before starting crawl, we suggest you to check the url for successful crawling. Here are some error situation when you input an empty url or invalid url.
+
+![Empty URL page](emptyurl.jpg)
+![Invalid URL page](invalidurl.jpg)
+
+Here is the valid url that can start crawling (`https://spider.cloud`)
+
+![Valid URL page](successurl.jpg)
+
 Please refer to the video for detailed instructions of how to use the tool.
 
 ### Design Pattern and Extensibility
