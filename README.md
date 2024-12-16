@@ -50,3 +50,8 @@ By using the `Cursive` library, we develop an intuitive text-based user interfac
 The `TUI` will display both the word frequency results and offer basic navigation and options.
 
 ## **Reproducibility**
+
+After you download the unzip package from our git repository. Unzip the unzip package to any location. Use terminal `cd` command to go to the unzip file location.
+```
+cd ECE1724_WebCrawler/crawler
+```
