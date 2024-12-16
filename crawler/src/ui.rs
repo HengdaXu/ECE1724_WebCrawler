@@ -57,32 +57,41 @@ pub async fn init_ui() {
             let crawl_url = s
                 .call_on_name("url_input", |view: &mut EditView| view.get_content())
                 .unwrap();
-            
-            let crawl_url = crawl_url.clone();
-            let cb_sink = s.cb_sink().clone();
-            tokio::spawn(async move {
-                let pages = crawl_web(crawl_url.to_string()).await;
-                let combined_text = parsing_web(pages).await;
-                let word_freq: HashMap<String, usize> = analyze_text(&combined_text.clone().unwrap()).await;
-                cb_sink.send(Box::new(move |s| {
-                    if let Some(combined_text) = combined_text {
-                        s.add_layer(
-                            Dialog::around(TextView::new(combined_text)).title("Crawled Text")
-                                .title("Entered URL")
-                                .button("Back", |s| {
-                                    s.pop_layer();
-                                })
-                                .button("Frequency Analysis", move |s|{
-                                    let results = word_freq.clone();
-                                    word_freq_results(s, results);
-                                }),
-                        );
-                    } else {
-                        error_message(s, "Error: Failed to crawl or parse the pages.");
-                    }
-                })).unwrap();
-            });
 
+            if crawl_url.trim().is_empty(){
+                s.add_layer(
+                    Dialog::around(TextView::new("Please Enter URL"))
+                        .title("Empty URL")
+                        .button("OK", |s| {
+                            s.pop_layer();
+                        }),
+                );
+            }else{
+                let crawl_url = crawl_url.clone();
+                let cb_sink = s.cb_sink().clone();
+                tokio::spawn(async move {
+                    let pages = crawl_web(crawl_url.to_string()).await;
+                    let combined_text = parsing_web(pages).await;
+                    let word_freq: HashMap<String, usize> = analyze_text(&combined_text.clone().unwrap()).await;
+                    cb_sink.send(Box::new(move |s| {
+                        if let Some(combined_text) = combined_text {
+                            s.add_layer(
+                                Dialog::around(TextView::new(combined_text)).title("Crawled Text")
+                                    .title("Entered URL")
+                                    .button("Back", |s| {
+                                        s.pop_layer();
+                                    })
+                                    .button("Frequency Analysis", move |s|{
+                                        let results = word_freq.clone();
+                                        word_freq_results(s, results);
+                                    }),
+                            );
+                        } else {
+                            error_message(s, "Error: Failed to crawl or parse the pages.");
+                        }
+                    })).unwrap();
+                });
+            }
         }))
         .child(Button::new("Check", check_url))
         .child(Button::new("Quit", |s| {
@@ -146,32 +155,42 @@ fn check_url(s: &mut Cursive) {
         .call_on_name("url_input", |view: &mut EditView| view.get_content())
         .unwrap();
 
-    // Create the new layer to check the url
-    // check URL
-    match Url::parse(&crawl_url) {
-        Ok(_) => {
-            s.add_layer(
-                Dialog::around(TextView::new(format!("You entered: {}", crawl_url)))
-                    .title("Entered URL")
-                    .button("OK", |s| {
-                        s.pop_layer();
-                    }),
-            );
-        }
-        Err(ParseError::InvalidPort) => {
-            error_message(s, "Error: The URL contains an invalid port number.");
-        }
-        Err(ParseError::RelativeUrlWithoutBase) => {
-            error_message(s, "Error: The URL does not have a valid base protocol.");
-        }
-        Err(ParseError::InvalidIpv4Address) => {
-            error_message(s, "Error: The URL contains an invalid IPv4 address.");
-        }
-        Err(ParseError::InvalidIpv6Address) => {
-            error_message(s, "Error: The URL contains an invalid IPv6 address.");
-        }
-        Err(err) => {
-            error_message(s, &format!("Error parsing URL: {}", err));
+    if crawl_url.trim().is_empty(){
+        s.add_layer(
+            Dialog::around(TextView::new("Please Enter URL"))
+                .title("Empty URL")
+                .button("OK", |s| {
+                    s.pop_layer();
+                }),
+        );
+    }else{
+        // Create the new layer to check the url
+        // check URL
+        match Url::parse(&crawl_url) {
+            Ok(_) => {
+                s.add_layer(
+                    Dialog::around(TextView::new(format!("You entered: {}", crawl_url)))
+                        .title("Entered URL")
+                        .button("OK", |s| {
+                            s.pop_layer();
+                        }),
+                );
+            }
+            Err(ParseError::InvalidPort) => {
+                error_message(s, "Error: The URL contains an invalid port number.");
+            }
+            Err(ParseError::RelativeUrlWithoutBase) => {
+                error_message(s, "Error: The URL does not have a valid base protocol.");
+            }
+            Err(ParseError::InvalidIpv4Address) => {
+                error_message(s, "Error: The URL contains an invalid IPv4 address.");
+            }
+            Err(ParseError::InvalidIpv6Address) => {
+                error_message(s, "Error: The URL contains an invalid IPv6 address.");
+            }
+            Err(err) => {
+                error_message(s, &format!("Error parsing URL: {}", err));
+            }
         }
     }
 }
@@ -185,4 +204,5 @@ fn error_message(s: &mut Cursive, message: &str) {
             }),
     );
 }
+
 
