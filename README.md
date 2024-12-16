@@ -6,6 +6,8 @@
 1. [Motivation](#motivation)
 2. [Objective and Key Features](#objective-and-key-features)
 3. [Reproducibility](#reproducibility)
+4. [Future Plan](#future-plan)
+5. [Contributions](#contributions)
 
 ## **Motivation**
 
@@ -85,9 +87,22 @@ Also, you can click the `Top 5` button to display the 5 words with the highest f
 
 ![Top 5](top.jpg)
 
-If you want to go back previous interface, just click the `ok` button or `back` button.
+If you want to go back previous interface, just click the `close` button, `back` button or `ok` button.
 
 Please refer to the video for detailed instructions of how to use the tool.
 
 ### Design Pattern and Extensibility
-We refer to the MVC template and divide the functionality of the entire application into different pages. For the convenience of future extensions, we implement different functions in different files, which are crawler, parser, analyzer, ui and main.
+We refer to the MVC template and divide the functionality of the entire application into different parts. For the convenience of future extensions, we implement different functions in different files, which are `crawler.rs`, `parser.rs`, `analyzer.rs`, `ui.rs` and `main.rs`.
+
+
+## **Future Plan**
+
+In the future, we will try to extend the existing features.
+We will consider adding multiple interfaces to truly implement asynchronous crawling. More specifically, we will design multiple crawl pages to allow users to crawl multiple pages at the same time.
+Secondly, we will consider adding more parsing functionality to the different web types such as dynamic, video and audio sites.
+And then we'll expand to include more analytical capabilities like sentiment analysis.
+Finally, we think about enriching the UI to make the UI more beautiful, clear and easy to use.
+
+## **Contributions**
+
+Since my teammates had dropped this course, all works are done by myself.
