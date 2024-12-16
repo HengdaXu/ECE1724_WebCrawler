@@ -60,3 +60,11 @@ Then, use `cargo build` and `cargo run`(`cargo build` may take few minutes to co
 cargo build
 cargo run
 ```
+After `cargo run`, the UI will show on the terminal. On the main UI interface, there is a `Enter a URL to crawl` where user can input the url. 
+
+![main UI page](main.jpg)
+
+Please refer to the video for detailed instructions of how to use the tool.
+
+### Design Pattern and Extensibility
+We refer to the MVC template and divide the functionality of the entire application into different pages. For the convenience of future extensions, we implement different functions in different files, which are crawler, parser, analyzer, ui and main.
